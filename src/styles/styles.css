@@ -1,0 +1,436 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  background-color: #f8f8f8;
+  color: #222;
+  line-height: 1.6;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(1, 11, 102);
+}
+
+/* FORM */
+
+.home-loginForm-username {
+  width: 100%;
+  padding: 14px;
+  background-color: rgb(215, 233, 248);
+  border: none;
+  border-radius: 5px;
+}
+
+/* Layout */
+
+.login-main,
+.signup-main {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.home-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2rem;
+  width: 350px;
+}
+
+.home-hero-content-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(204, 204, 204);
+  padding: 30px 40px 15px;
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+.home-loginForm-logo {
+  margin-bottom: 2.5rem;
+}
+
+.home-loginform-label {
+  color: #999;
+  font-size: 0.7rem;
+  position: relative;
+  top: 1.4em;
+  left: 15px;
+}
+
+.home-loginForm-button {
+  width: 100%;
+  color: white;
+  background-color: rgb(16, 140, 223);
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: inherit;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.home-loginForm-divider {
+  margin: 15px auto;
+  color: #999;
+  font-weight: bold;
+}
+
+.home-loginForm-FacebookLink {
+  font-size: 1 rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.home-loginForm-forgotPassword {
+  font-size: 0.8rem;
+}
+
+.home-signup {
+  background-color: white;
+  border: 1px solid rgb(204, 204, 204);
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.home-signup-link {
+  color: rgb(16, 140, 223);
+  font-weight: bold;
+}
+
+.home-appLinks {
+  text-align: center;
+}
+
+.home-applinks-text {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.home-applinks-link {
+  width: 40%;
+}
+
+/* Footer */
+
+.footer {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.home-footer-links,
+.home-footer-disclaimer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.home-footer-link,
+.home-footer-copyright {
+  margin-inline: 0.5em;
+  color: #777;
+  font-size: 0.9em;
+}
+
+.home-footer-select {
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: 10px;
+}
+
+/* Signup form */
+
+.signupForm-subheading {
+  color: #999;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.signupForm-logo {
+  margin-bottom: 0;
+}
+
+.signupForm-loginButton {
+  width: 100%;
+  color: white;
+  background-color: rgb(16, 140, 223);
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: inherit;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.signupForm-input {
+  width: 100%;
+  padding: 1.1rem 0.8rem 0.8rem;
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.signupForm-disclaimer {
+  margin-block: 1em;
+  color: #999;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* Feed Page */
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  padding: 1rem;
+  background-color: white;
+}
+
+.header-logo {
+  width: 120px;
+}
+
+.header-logo-image {
+  min-width: 120px;
+}
+
+.navigation-list {
+  list-style: none;
+  display: flex;
+}
+
+.navigation-list-item {
+  margin-left: 2em;
+}
+
+.header-label {
+  color: #999;
+  font-size: 0.7rem;
+}
+
+.header-input {
+  padding: 10px;
+  min-width: 250px;
+  background-color: #eee;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.9 rem;
+  margin-top: 0;
+}
+
+i {
+  font-size: 1.5rem;
+  color: #222;
+}
+
+@media (max-width: 700px) {
+  .searchbar {
+    display: none;
+  }
+}
+
+.main {
+  display: block;
+}
+
+.feed-photo-item {
+  border: 1px solid gray;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.feed-photo-header {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  padding: 10px;
+}
+
+.feed-photo-header-avatar {
+  display: flex;
+}
+
+.feed-poster-avatar {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: gray;
+  margin-right: 20px;
+}
+
+.feed-photo-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.feed-photo-action-item {
+  margin-right: 10px;
+}
+
+.feed-photo-likes {
+  display: flex;
+  padding: 10px;
+  border: 1px solid red;
+  align-items: center;
+}
+
+.feed-photo-title {
+  padding: 10px;
+}
+
+.feed-photo-comments {
+  padding: 10px;
+  margin-top: 25px;
+}
+
+.feed-photo-addComment {
+  width: 100%;
+  height: 40px;
+  border: 1px solid gray;
+  display: flex;
+  margin-top: 25px;
+}
+
+.feed-photo-addCooment-input {
+  width: 90%;
+  padding: 10px;
+}
+
+.feed-photo-addCooment-submit {
+  width: 10%;
+  padding: 10px;
+  height: 40px;
+}
+
+.feed-photo-comment {
+  margin-bottom: 15px;
+}
+
+/* POST */
+
+.post {
+  max-width: 650px;
+  border: 1px solid #999;
+  margin: 3rem auto;
+  padding: 1em;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  align-items: center;
+}
+
+.post-header__author {
+  display: flex;
+  gap: 1em;
+}
+
+.post-header__avatar {
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  background-color: #777;
+}
+
+.post-body {
+  display: flex;
+  place-content: center;
+}
+
+.post-body__image {
+  max-width: 100%;
+  max-height: 70vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.post-action__icon {
+  margin-inline: 0.5em;
+}
+
+.post-likes {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.post-likes__avatar {
+  display: inline-block;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  background-color: #777;
+  margin-right: 1em;
+}
+
+.post-title {
+  padding: 1em;
+}
+
+.post-comments {
+  padding: 1em;
+}
+
+.post-comment {
+  margin-top: 0.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-addComment {
+  display: flex;
+  margin-top: 2em;
+  align-items: stretch;
+}
+
+.post-addComment__input {
+  display: block;
+  width: 80%;
+  padding-inline: 1em;
+}
+
+.post-addComment__button {
+  display: block;
+  width: 20%;
+  height: 3em;
+}
+
+.test {
+  background-color: pink;
+  display: flex;
+}

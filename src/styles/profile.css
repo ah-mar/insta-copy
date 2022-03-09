@@ -1,0 +1,58 @@
+.container {
+  width: 1000px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+}
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.img-container {
+  background-color: #222;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.user-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin-top: 25px;
+}
+
+.user-avatar {
+  width: 50%;
+  justify-self: center;
+}
+
+.user-avatar-image {
+  border-radius: 50%;
+}
+
+.user-info-header {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.user-info-stats {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.user-info-follow {
+  padding: 0.5em 2em;
+  border: none;
+  background-color: steelblue;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
