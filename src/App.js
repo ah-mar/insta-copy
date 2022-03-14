@@ -4,13 +4,13 @@ import Signup from "./pages/signup.js";
 import Dashboard from "./pages/dashboard";
 import NotFound from "./pages/notfound";
 import Profile from "./pages/profile";
-import {  Routes, Route, Navigate } from "react-router-dom";
-import {  getUser2, signoutUser } from "./services/firebase";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { getUser2, signoutUser } from "./services/firebase";
 import { useState } from "react";
 
 function App() {
-  // const [userId, setUserId] = useState(getUser2());
-  const [userId, setUserId] = useState(true); // temporarilt to access dashboard page
+  const [userId, setUserId] = useState(getUser2());
+  // const [userId, setUserId] = useState(true); // temporarilt to access dashboard page
 
   function handleSignout() {
     signoutUser()
