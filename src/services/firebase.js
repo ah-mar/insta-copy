@@ -6,6 +6,7 @@ import {
   getDocs,
   doc,
   getDoc,
+  setDoc,
   query,
   where,
 } from "firebase/firestore";
@@ -29,12 +30,22 @@ const db = getFirestore(firebaseApp);
 
 // Signup with email and password. use createUserWithEmailAndPassword async function and pass it auth reference, email and password. The useRCredential is returned. Read userCredential.user
 
-function signupNewUser(email, password) {
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => console.log(userCredential.user, "Signed up"))
-    .catch((error) => console.log(error.code, error.message));
+async function signupNewUser(email, password, fullname, username) {
+  try {
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      email,
+      password
+    );
+    console.log("signUpNewUser", "Signed Up");
+    console.log(userCredential.user, "Signed up");
+    return userCredential.user.uid;
+  } catch (error) {
+    console.log(error.code, error.message, "signupNewUser");
+  }
 
   // {email: 'raju@gmail.com', password: 'raju eating kaju'}
+  // {email: 'babu@gmail.com', password: 'ladki ka chakkar'}
 }
 
 // Sign in existing user - use signInWithEmailAndPassword function and pass auth, email and password. Then you will recieve userCredntial. Extract user information by using userCredntial.user
@@ -163,6 +174,25 @@ async function getUserDetails(userId) {
   }
 }
 
+async function addUser(userId, username, fullname, email) {
+  try {
+    const docRef = doc(db, "users", userId);
+    const data = {
+      dateCreated: new Date(),
+      emailAddress: email,
+      followers: [],
+      following: [],
+      fullName: fullname,
+      userId: userId,
+      username: username,
+    };
+    const ref = await setDoc(docRef, data);
+    console.log("user data writter", ref);
+  } catch (error) {
+    console.log("error in adding user", error.message);
+  }
+}
+
 export {
   signupNewUser,
   signinExistingUser,
@@ -173,6 +203,7 @@ export {
   getSomeDocs,
   readOneDoc,
   getUserDetails,
+  addUser,
 };
 
 // password: scrimbainsta123
